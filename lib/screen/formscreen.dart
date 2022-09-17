@@ -17,7 +17,18 @@ class _FormScreenState extends State<FormScreen> {
       body: Container(
         padding: EdgeInsets.all(20),
         child: Form(
-          child: Column(),
+          child: Column(
+            children: [
+              Text(
+                "ชื่อนักเรียน",
+                style: TextStyle(fontSize: 20),
+              ),
+              TextFormField(),
+              SizedBox(
+                height: 15,
+              )
+            ],
+          ),
         ),
       ),
     );
