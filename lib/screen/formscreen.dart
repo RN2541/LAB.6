@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_firebase/model/Student.dart';
+import 'package:form_field_validator/form_field_validator.dart';
 
 class FormScreen extends StatefulWidget {
   const FormScreen({Key? key}) : super(key: key);
@@ -32,6 +33,8 @@ class _FormScreenState extends State<FormScreen> {
                   style: TextStyle(fontSize: 20),
                 ),
                 TextFormField(
+                  validator:
+                      RequiredValidator(errorText: "กรุณาป้อนชื่อด้วยค่ะ"),
                   onSaved: (String? fname) {
                     myStudent.fname = fname!;
                   },
@@ -82,7 +85,7 @@ class _FormScreenState extends State<FormScreen> {
                       onPressed: () {
                         formKey.currentState!.save();
                         print(
-                            "${myStudent.fname}${myStudent.lname}${myStudent.email}${myStudent.score}");
+                            "ข้อมูล = ${myStudent.fname}${myStudent.lname}${myStudent.email}${myStudent.score}");
                       }),
                 )
               ],
