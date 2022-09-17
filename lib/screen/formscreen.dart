@@ -20,12 +20,41 @@ class _FormScreenState extends State<FormScreen> {
           child: Column(
             children: [
               Text(
-                "ชื่อนักเรียน",
+                "ชื่อ",
                 style: TextStyle(fontSize: 20),
               ),
               TextFormField(),
               SizedBox(
                 height: 15,
+              ),
+              Text(
+                "นามสกุล",
+                style: TextStyle(fontSize: 20),
+              ),
+              TextFormField(),
+              SizedBox(
+                height: 15,
+              ),
+              Text(
+                "อีเมล",
+                style: TextStyle(fontSize: 20),
+              ),
+              TextFormField(),
+              SizedBox(
+                height: 15,
+              ),
+              Text(
+                "คะแนน",
+                style: TextStyle(fontSize: 20),
+              ),
+              TextFormField(),
+              SizedBox(
+                child: ElevatedButton(
+                    child: Text(
+                      "บันทึกข้อมูล",
+                      style: TextStyle(fontSize: 20),
+                    ),
+                    onPressed: () {}),
               )
             ],
           ),
