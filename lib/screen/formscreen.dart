@@ -14,6 +14,12 @@ class _FormScreenState extends State<FormScreen> {
       appBar: AppBar(
         title: Text("แบบฟอร์มบันทึกคะแนนสอบ"),
       ),
+      body: Container(
+        padding: EdgeInsets.all(20),
+        child: Form(
+          child: Column(),
+        ),
+      ),
     );
   }
 }
