@@ -18,6 +18,7 @@ class _FormScreenState extends State<FormScreen> {
         padding: EdgeInsets.all(20),
         child: Form(
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
                 "ชื่อ",
@@ -33,6 +34,7 @@ class _FormScreenState extends State<FormScreen> {
               ),
               TextFormField(),
               SizedBox(
+                width: double.infinity,
                 height: 15,
               ),
               Text(
