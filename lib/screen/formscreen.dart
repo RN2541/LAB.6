@@ -80,6 +80,7 @@ class _FormScreenState extends State<FormScreen> {
                         style: TextStyle(fontSize: 20),
                       ),
                       onPressed: () {
+                        formKey.currentState!.save();
                         print("${myStudent.fname}");
                         print("${myStudent.lname}");
                         print("${myStudent.email}");
