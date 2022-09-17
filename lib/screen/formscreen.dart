@@ -81,10 +81,8 @@ class _FormScreenState extends State<FormScreen> {
                       ),
                       onPressed: () {
                         formKey.currentState!.save();
-                        print("${myStudent.fname}");
-                        print("${myStudent.lname}");
-                        print("${myStudent.email}");
-                        print("${myStudent.score}");
+                        print(
+                            "${myStudent.fname}${myStudent.lname}${myStudent.email}${myStudent.score}");
                       }),
                 )
               ],
