@@ -10,6 +10,8 @@ class FormScreen extends StatefulWidget {
 
 class _FormScreenState extends State<FormScreen> {
   final formKey = GlobalKey<FormState>();
+  Student myStudent =
+      Student(fname: "ชื่อ", lname: "นามสกุล", email: "อีเมล", score: "คะแนน");
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +31,11 @@ class _FormScreenState extends State<FormScreen> {
                   "ชื่อ",
                   style: TextStyle(fontSize: 20),
                 ),
-                TextFormField(),
+                TextFormField(
+                  onSaved: (String? fname) {
+                    myStudent.fname = fname!;
+                  },
+                ),
                 SizedBox(
                   height: 15,
                 ),
@@ -37,7 +43,11 @@ class _FormScreenState extends State<FormScreen> {
                   "นามสกุล",
                   style: TextStyle(fontSize: 20),
                 ),
-                TextFormField(),
+                TextFormField(
+                  onSaved: (String? lname) {
+                    myStudent.fname = lname!;
+                  },
+                ),
                 SizedBox(
                   width: double.infinity,
                   height: 15,
@@ -46,7 +56,11 @@ class _FormScreenState extends State<FormScreen> {
                   "อีเมล",
                   style: TextStyle(fontSize: 20),
                 ),
-                TextFormField(),
+                TextFormField(
+                  onSaved: (String? email) {
+                    myStudent.fname = email!;
+                  },
+                ),
                 SizedBox(
                   height: 15,
                 ),
@@ -54,14 +68,23 @@ class _FormScreenState extends State<FormScreen> {
                   "คะแนน",
                   style: TextStyle(fontSize: 20),
                 ),
-                TextFormField(),
+                TextFormField(
+                  onSaved: (String? score) {
+                    myStudent.fname = score!;
+                  },
+                ),
                 SizedBox(
                   child: ElevatedButton(
                       child: Text(
                         "บันทึกข้อมูล",
                         style: TextStyle(fontSize: 20),
                       ),
-                      onPressed: () {}),
+                      onPressed: () {
+                        print("${myStudent.fname}");
+                        print("${myStudent.lname}");
+                        print("${myStudent.email}");
+                        print("${myStudent.score}");
+                      }),
                 )
               ],
             ),
