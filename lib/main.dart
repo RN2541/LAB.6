@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_firebase/screen/formscreen.dart';
+import 'package:flutter_firebase/screen/formscreen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -36,7 +38,7 @@ class _MyHomePageState extends State<MyHomePage> {
       length: 2,
       child: Scaffold(
         body: TabBarView(
-          children: [Container(), Container()],
+          children: [FormScreen(), Container()],
         ),
         backgroundColor: Colors.orange,
         bottomNavigationBar: TabBar(
