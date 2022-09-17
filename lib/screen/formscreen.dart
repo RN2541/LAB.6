@@ -69,6 +69,7 @@ class _FormScreenState extends State<FormScreen> {
                   onSaved: (String? email) {
                     myStudent.fname = email!;
                   },
+                  keyboardType: TextInputType.emailAddress,
                 ),
                 SizedBox(
                   height: 15,
@@ -83,6 +84,7 @@ class _FormScreenState extends State<FormScreen> {
                   onSaved: (String? score) {
                     myStudent.fname = score!;
                   },
+                  keyboardType: TextInputType.number,
                 ),
                 SizedBox(
                   child: ElevatedButton(

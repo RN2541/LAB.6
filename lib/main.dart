@@ -40,7 +40,7 @@ class _MyHomePageState extends State<MyHomePage> {
         body: TabBarView(
           children: [FormScreen(), Container()],
         ),
-        backgroundColor: Colors.orange,
+        backgroundColor: Color.fromARGB(255, 170, 0, 255),
         bottomNavigationBar: TabBar(
           tabs: [
             Tab(
